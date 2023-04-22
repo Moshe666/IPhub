@@ -14,7 +14,67 @@
 </head>
 
 <div class="wrapper">
+  <div class="overlay"></div>
   <header class="header">
+    <section class="menu menu__hidden ">
+      <div class="menu__wrapper">
+        <nav class="menu__nav">
+          <ul class="menu__nav-list">
+            <li class="menu__nav-item">
+              <a class="menu__nav-link" href="#">Услуги</a>
+            </li>
+            <li class="menu__nav-item">
+              <a class="menu__nav-link" href="#">Кейсы</a>
+            </li>
+            <li class="menu__nav-item">
+              <a class="menu__nav-link" href="#">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__contacts">
+          <div class="menu__contact">
+            <p class="menu__contact-title">Наши контакты:</p>
+            <ul class="menu__contact-menu">
+              <li class="menu__contact-item">
+                <a class="menu__contact-link" href="mailto:example@iphub.com">example@iphub.com</a>
+              </li>
+              <li class="menu__contact-item">
+                <a class="menu__contact-link" href="tel:+78888888888:">+7 (888) 888 88 88</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__socials">
+            <p class="menu__socials-title">Мы в соцсетях:</p>
+            <ul class="menu__socials-menu">
+              <li class="menu__socials-item">
+                <a href="" class="menu__socials-link">Facebook</a>
+              </li>
+              <li class="menu__socials-item">
+                <a href="" class="menu__socials-link">Instagram</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__get">
+            <p class="menu__get-title">Как добраться:</p>
+            <div class="menu__get-menu">
+              <p class="menu__get-link">Схема проезда</p>
+            </div>
+            <div class="menu__get-text">
+              <div class="menu__get-document">
+                <p class="menu__get-address">123317, г. Москва, Пресненская наб., д.
+                  8, стр. 1, эт. 3, п. 1, оф. 10</p>
+                <div class="menu__get-about">
+                  <p class="menu__get__inn">ИНН:7703472433</p>
+                  <p class="menu__get__cpp">КПП:770301001</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <div class="header__top">
       <div class="container">
         <div class="header__top-inner">
@@ -44,6 +104,9 @@
               </li>
             </ul>
           </nav>
+          <a href="#" class="burger">
+            <span></span>
+          </a>
         </div>
       </div>
     </div>
@@ -71,71 +134,77 @@
         </div>
       </div>
       <div class="header__expirience">
+        
         <div class="container">
           <div class="header__expirience-inner">
-            <div class="expirience__block1">
-              <div class="expirience__heading">
-                <h2 class="expirience__title">Многолетний опыт</h2>
-                <p class="expirience__text">Наша компания была создана в 2019 году специалистами, имеющими опыт работы
-                  в сфере интеллектуальной собственности более 20 лет</p>
-              </div>
-              <ul class="expirience__list">
-                <li class="expirience__item">
-                  <h2 class="expirience__numbers">>300</h2>
-                  <p class="expirience__fact-text">Представления интересов в спорах по IP правам в год</p>
-                </li>
-                <li class="expirience__item">
-                  <h2 class="expirience__numbers">>2500</h2>
-                  <p class="expirience__fact-text">Оказаний юридической помощи компаниям в год</p>
-                </li>
-                <li class="expirience__item">
-                  <h2 class="expirience__numbers">1150</h2>
-                  <p class="expirience__fact-text">Завершённых дел по регистрации товарных знаков</p>
-                </li>
-                <li class="expirience__item">
-                  <h2 class="expirience__numbers">61</h2>
-                  <p class="expirience__fact-text">Совокупный опыт экспертов</p>
-                </li>
-                <li class="expirience__item">
-                  <h2 class="expirience__numbers">99%</h2>
-                  <p class="expirience__fact-text">Успех получения патентов</p>
-                </li>
-                <li class="expirience__item">
-                  <h2 class="expirience__numbers">98%</h2>
-                  <p class="expirience__fact-text">Успех регистрации товарных знаков</p>
-                </li>
-              </ul>
+            <div class="expirience__img-box">
+              <img src="image/content2.png" alt="" class="expirience__image">
             </div>
-          </div>
-        </div>
-        <div class="header__pract">
-          <div class="container">
-            <div class="header__pract-inner">
-              <div class="pract__heading">
-                <h2 class="pract__title">Подтвержденный практикой</h2>
-                <p class="pract__text">Мы и наши клиенты гордимся опытом, который подтверждается нашими
-                  результатами от закрепления прав заявителей до успешной защиты интересов</p>
+            <div class="expirience__blocks">
+              <div class="expirience__block1">
+                <div class="expirience__heading">
+                  <h2 class="expirience__title">Многолетний опыт</h2>
+                  <p class="expirience__text">Наша компания была создана в 2019 году специалистами, имеющими опыт работы
+                    в сфере интеллектуальной собственности более 20 лет</p>
+                </div>
+                <ul class="expirience__list">
+                  <li class="expirience__item">
+                    <h2 class="expirience__numbers">>300</h2>
+                    <p class="expirience__fact-text">Представления интересов в спорах по IP правам в год</p>
+                  </li>
+                  <li class="expirience__item">
+                    <h2 class="expirience__numbers">>2500</h2>
+                    <p class="expirience__fact-text">Оказаний юридической помощи компаниям в год</p>
+                  </li>
+                  <li class="expirience__item">
+                    <h2 class="expirience__numbers">1150</h2>
+                    <p class="expirience__fact-text">Завершённых дел по регистрации товарных знаков</p>
+                  </li>
+                  <li class="expirience__item">
+                    <h2 class="expirience__numbers">61</h2>
+                    <p class="expirience__fact-text">Совокупный опыт экспертов</p>
+                  </li>
+                  <li class="expirience__item">
+                    <h2 class="expirience__numbers">99%</h2>
+                    <p class="expirience__fact-text">Успех получения патентов</p>
+                  </li>
+                  <li class="expirience__item">
+                    <h2 class="expirience__numbers">98%</h2>
+                    <p class="expirience__fact-text">Успех регистрации товарных знаков</p>
+                  </li>
+                </ul>
               </div>
-              <ul class="pract__list">
-                <li class="pract__link">
-                  <img src="image/pract6.svg" alt="">
-                </li>
-                <li class="pract__link">
-                  <img src="image/pract3.svg" alt="">
-                </li>
-                <li class="pract__link">
-                  <img src="image/pract5.svg" alt="">
-                </li>
-                <li class="pract__link">
-                  <img src="image/pract2.svg" alt="">
-                </li>
-                <li class="pract__link">
-                  <img src="image/pract4.svg" alt="">
-                </li>
-                <li class="pract__link">
-                  <img src="image/pract1.svg" alt="">
-                </li>
-              </ul>
+              <div class="header__pract">
+                  <div class="header__pract-inner">
+                    <div class="expirience__block2">
+                      <div class="pract__heading">
+                        <h2 class="pract__title">Подтвержденный практикой</h2>
+                        <p class="pract__text">Мы и наши клиенты гордимся опытом, который подтверждается нашими
+                          результатами от закрепления прав заявителей до успешной защиты интересов</p>
+                      </div>
+                      <ul class="pract__list">
+                        <li class="pract__link">
+                          <img src="/image/pract6.svg" alt="">
+                        </li>
+                        <li class="pract__link">
+                          <img src="/image/pract3.svg" alt="">
+                        </li>
+                        <li class="pract__link">
+                          <img src="/image/pract5.svg" alt="">
+                        </li>
+                        <li class="pract__link">
+                          <img src="/image/pract2.svg" alt="">
+                        </li>
+                        <li class="pract__link">
+                          <img src="/image/pract4.svg" alt="">
+                        </li>
+                        <li class="pract__link">
+                          <img src="/image/pract1.svg" alt="">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -149,7 +218,7 @@
         <div class="resources__inner">
           <h2 class="resources__htitle">Решения для вашего бизнеса</h2>
           <div class="resources__link">
-            <p class="resources__slide-text">У нас есть все необходимые ресурсы
+            <p class="resources__slide-heading">У нас есть все необходимые ресурсы
               для решения любых ваших потребностей в сфере интеллектуальной собственности</p>
             <button class="resources__button button--empty"><a href="#" class="services__link">Все услуги
               </a></button>
@@ -157,75 +226,48 @@
 
           <div class="resources__slider">
             <ul class="resources__slide-list">
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
+              <li class="resources__list">
+                <div class="arrow">
+                  <div class="arrow__stick"></div>
                 </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (1).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Регистрация товарного знака в Роспатенте</p>
+                <img src="image/slider1/Vector (1).png" alt=""> <span class="resources__models">Изобретения и
+                  Полезные модели</span>
+                <p class="resources__text">Регистрация товарного знака в Роспатенте</p>
               </li>
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
-                </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (2).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Инновационные устройства</p>
+              <li class="resources__list">
+                <div class="arrow">
+                  <div class="arrow__stick"></div>
+                </div><img src="image/slider1/Vector (2).png" alt=""> <span class="resources__models">Изобретения и
+                  Полезные модели</span>
+                <p class="resources__text">Регистрация прав инновационные</p>
               </li>
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
-                </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (3).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Промышленные образцы</p>
+              <li class="resources__list">
+                <div class="arrow">
+                  <div class="arrow__stick"></div>
+                </div><img src="image/slider1/Vector (2).png" alt=""> <span class="resources__models">Изобретения и
+                  Полезные модели</span>
+                <p class="resources__text">Промышленные образцы</p>
               </li>
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
-                </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (3).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Программы для ЭВМ и Базы данных</p>
+              <li class="resources__list">
+                <div class="arrow">
+                  <div class="arrow__stick"></div>
+                </div><img src="image/slider1/Vector (1).png" alt=""> <span class="resources__models">Изобретения и
+                  Полезные модели</span>
+                <p class="resources__text">Программы для ЭВМ и Базы данных</p>
               </li>
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
-                </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (2).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Представление интересов, суды</p>
+              <li class="resources__list">
+                <div class="arrow">
+                  <div class="arrow__stick"></div>
+                </div><img src="image/slider1/Vector (2).png" alt=""> <span class="resources__models">Изобретения и
+                  Полезные модели</span>
+                <p class="resources__text">Представление интересов, суды</p>
               </li>
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
-                </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (1).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Регистрация товарного знака в Роспатенте</p>
-              </li>
-              <li class="resources__slide">
-                <div class="resources__arrow">
-                  <img src="image/slider1/arrow.png" alt="">
-                </div>
-                <div class="resources__image">
-                  <img src="image/slider1/Vector (3).png" alt="">
-                </div>
-                <span class="resources__slide-title">Изобретения и Полезные модели</span>
-                <p class="resources__slide-text">Регистрация товарного знака в Роспатенте</p>
+              <li class="resources__list">
+                <div class="arrow">
+                  <div class="arrow__stick"></div>
+                </div><img src="image/slider1/Vector (3).png" alt=""> <span class="resources__models">Изобретения и
+                  Полезные модели</span>
+                <p class="resources__text">Регистрация товарного знака в Роспатенте</p>
               </li>
             </ul>
             <div class="resources__slider-arrows">
@@ -493,8 +535,7 @@
           <div class="cases__link">
             <p class="cases__slide-text">У нас есть все необходимые ресурсы
               для решения любых ваших потребностей в сфере интеллектуальной собственности</p>
-            <button class="cases__button  button--empty"><a href="#" class="services__link">Все услуги
-              </a></button>
+            <button class="cases__button  button--empty"><a href="#" class="services__link">Все кейсы</a></button>
           </div>
           <div class="cases__slider">
             <ul class="cases__slide-list">
@@ -800,17 +841,17 @@
         <div class="footer__info">
           <div class="footer__info-navigation">
             <p class="footer__info-nav">Навигация по сайту:</p>
-              <ul class="footer__info-menu">
-                <li class="footer__info-item">
-                  <a href="#" class="footer__info-link">Услуги</a>
-                </li>
-                <li class="footer__info-item">
-                  <a href="#" class="footer__info-link">Кейсы</a>
-                </li>
-                <li class="footer__info-item">
-                  <a href="#" class="footer__info-link">FAQ</a>
-                </li>
-              </ul>
+            <ul class="footer__info-menu">
+              <li class="footer__info-item">
+                <a href="#" class="footer__info-link">Услуги</a>
+              </li>
+              <li class="footer__info-item">
+                <a href="#" class="footer__info-link">Кейсы</a>
+              </li>
+              <li class="footer__info-item">
+                <a href="#" class="footer__info-link">FAQ</a>
+              </li>
+            </ul>
           </div>
           <div class="footer__contacts">
             <p class="footer__contacts-title">Наши контакты:</p>
@@ -834,11 +875,11 @@
               </li>
             </ul>
           </div>
-          <div class="footer-get">
-            <p class="footer-get-title">Как добраться:</p>
-            <ul class="footer-get-menu">
-              <li class="footer-get-item">
-                <a href="" class="footer-get-link">Схема проезда</a>
+          <div class="footer__get">
+            <p class="footer__get-title">Как добраться:</p>
+            <ul class="footer__get-menu">
+              <li class="footer__get-item">
+                <a href="" class="footer__get-link">Схема проезда</a>
               </li>
             </ul>
           </div>

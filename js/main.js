@@ -24,19 +24,27 @@ $(function () {
         appendDots: $('.customers__slider-buttons'),
         responsive: [
             {
-                breakpoint: 730,
+                breakpoint: 1400,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 3
                 },
             },
             {
-                breakpoint: 570,
+                breakpoint: 600,
                 settings: {
                     draggable: true,
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     arrows: false,
                 }
-            }
+            },
+            {
+                breakpoint: 770,
+                settings: {
+                    draggable: true,
+                    slidesToShow: 2,
+                    arrows: false,
+                }
+            },
         ],
 
     })
@@ -320,7 +328,7 @@ $('.cases__slider').slick({
     appendDots: $('.cases__slider-buttons'),
     responsive: [
         {
-            breakpoint: 730,
+            breakpoint: 1000,
             settings: {
                 slidesToShow: 1
             },
@@ -360,13 +368,21 @@ $('.team__slider-list').slick({
     appendDots: $('.team__slider-buttons'),
     responsive: [
         {
-            breakpoint: 730,
+            breakpoint: 1000,
             settings: {
-                slidesToShow: 1
+                slidesToShow: 3
             },
         },
         {
-            breakpoint: 570,
+            breakpoint: 480,
+            settings: {
+                draggable: true,
+                slidesToShow: 2,
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 360,
             settings: {
                 draggable: true,
                 slidesToShow: 1,
@@ -386,5 +402,31 @@ $('.team__slider-next').on('click', function (e) {
 })
 
 
+// ============================= BURGER =============================
+
+$('.burger, .overlay').on('click', function (e) {
+    e.preventDefault()
+    $('.menu__wrapper').toggleClass('menu--open')
+    $('.overlay').toggleClass('overlay--show')
+    $('body').toggleClass('lock')
+    $('.burger').toggleClass('burger--active')
+
+})
+
+$('.menu__wrapper, .overlay').on('click', function (e) {
+    e.preventDefault()
+    $('.menu__wrapper').removeClass('menu--open')
+    $('.overlay').removeClass('overlay--show')
+    $('body').removeClass('lock')
+    $('.burger').removeClass('burger--active')
+
+})
+setInterval(() => {
+    if ($(window).scrollTop() > 0 && $('.menu__wrapper').hasClass('menu--open') === false) {
+        $('.burger').addClass('burger--follow')
+    } else {
+        $('.burger').removeClass('burger--follow')
+    }
+}, 0);
 
 
