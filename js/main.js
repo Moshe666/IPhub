@@ -45,6 +45,14 @@ $(function () {
                     arrows: false,
                 }
             },
+            {
+                breakpoint: 600,
+                settings: {
+                    draggable: true,
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            },
         ],
 
     })
