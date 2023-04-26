@@ -320,8 +320,8 @@ body.lock {
 }
 
 .header__body-inner {
-  margin-bottom: 160px;
   padding-top: 110px;
+  padding-bottom: 110px;
 }
 
 .header__main {
@@ -425,7 +425,7 @@ body.lock {
   display: grid;
   grid-template-columns: 364px 804px;
   column-gap: 48px;
-
+  padding-bottom: 120px;
 }
 
 
@@ -504,9 +504,6 @@ body.lock {
 /* ===========================HEADER-PRACT================================= */
 /* ===========================HEADER-PRACT================================= */
 
-.header__pract {
-  padding-bottom: 160px;
-}
 
 
 .header__pract-inner {
@@ -647,22 +644,10 @@ body.lock {
 /* -------------------SLIDER------------- */
 /* -------------------SLIDER------------- */
 
-/* .resources__slider.slick-track {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  gap: 0 20px;
-
-
-} */
-
 
 
 .resources__slider-list {
-  width: 200%;
+  width: 100%;
   margin-bottom: 63px;
   display: flex;
   align-items: center;
@@ -675,11 +660,11 @@ body.lock {
   position: relative;
   padding: 20px 25px;
   overflow: hidden;
-  box-sizing: border-box;
   background: #1B1B1B;
   border-radius: 8px;
   height: 100%;
   margin-right: 20px;
+
 }
 
 
@@ -719,7 +704,7 @@ body.lock {
   color: #fff;
   font-weight: 500;
   font-size: 18px;
-  line-height: 28px
+  line-height: 160%;
 }
 
 .resources__text {
@@ -730,83 +715,9 @@ body.lock {
   transition: all 0.5s;
 }
 
-/* ниже мое */
-
-.resources__slider {
-  width: 100%;
-  position: relative;
-
+.resources__buttom {
+  display: none;
 }
-
-.resources__slide-list {
-  display: flex;
-
-}
-
-
-
-
-
-.resources__list:hover .resources__text {
-  font-size: 14px;
-  line-height: 23px
-}
-
-.resources__list:hover .resources__slide-title {
-  opacity: 1;
-  margin-bottom: 5px
-}
-
-.resources__slide:hover .resources__arrow img {
-  opacity: 1
-}
-
-.resources__slide:hover .resources__image img {
-  margin-bottom: 30px;
-  opacity: 1;
-  transition: all .3s;
-  transform: scale(0.8);
-}
-
-
-.resources__arrow {
-  margin-bottom: 23px;
-
-}
-
-.resources__arrow img {
-  margin-left: auto;
-  opacity: 0.4;
-  transition: all 1s;
-}
-
-.resources__image {
-  margin-bottom: 30px;
-}
-
-.resources__image img {
-  margin: 0 auto;
-  display: block;
-  transition: all 1s;
-  margin-top: 43px;
-}
-
-.resources__slide-heading {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 160%;
-  color: #8A8A8A;
-}
-
-.resources__slide-title {
-  opacity: 0;
-  color: #fff;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  transition: all .5s;
-}
-
 
 
 /* -------------------SLIDER-ARROWS------------- */
@@ -896,10 +807,18 @@ body.lock {
 
 
 .quiz {
-  padding: 160px 160px;
+  padding: 160px 0;
 }
 
+.quiz__inner {
+  margin: 0 auto;
 
+}
+
+.quiz__wrapper {
+  width: 1041px;
+  margin: 0 auto;
+}
 
 .quiz__heading {
   color: #fff;
@@ -918,7 +837,6 @@ body.lock {
   font-weight: 500;
   font-size: 16px;
   line-height: 160%;
-
   opacity: 0.75;
 }
 
@@ -929,6 +847,8 @@ body.lock {
   border-radius: 10px;
   padding-bottom: 30px;
   position: relative;
+  display: block;
+  width: 100%;
 }
 
 .quiz__questions {
@@ -936,6 +856,7 @@ body.lock {
   justify-content: space-between;
   padding-top: 40px;
   margin: 0 40px;
+
 }
 
 .quiz__question {
@@ -943,7 +864,7 @@ body.lock {
   font-size: 24px;
   line-height: 160%;
   margin-bottom: 30px;
-
+  margin-right: 50px;
 }
 
 .quiz__number {
@@ -980,6 +901,8 @@ body.lock {
 
 }
 
+
+
 .quiz__item:hover {
   background: #ef5543
 }
@@ -1010,6 +933,7 @@ body.lock {
 .quiz__bonus {
   width: 804px;
   padding-top: 50px;
+  margin: 0 auto;
 }
 
 
@@ -1030,6 +954,7 @@ body.lock {
 .quiz__bonuses {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .quiz__block {
@@ -1046,11 +971,17 @@ body.lock {
   color: #fff;
 }
 
+.quiz__block:last-child {
+  margin-right: 0;
+}
+
 
 
 /* ===========================CASES================================= */
 /* ===========================CASES================================= */
-
+.cases__bottom{
+  display: none;
+}
 
 .main__cases {
   padding: 160px 0 240px;
@@ -1668,19 +1599,19 @@ body.lock {
 }
 
 .consultation__button-box {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-
+  margin: 0 auto;
 }
 
 
 .consultation__button {
   background: #1B1B1B;
-  ;
+  margin-right: ;
 }
 
 .consultation__button:last-child {
-  margin-right: 0;
+  margin: 0 auto;
 }
 
 
@@ -1946,7 +1877,13 @@ body.lock {
   color: #DA4533;
   transform: scale(1.1);
   transition: all .3s;
+
 }
+
+
+
+
+
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 /* ==================1400========================= */
@@ -2046,7 +1983,6 @@ body.lock {
     color: #FFFFFF;
   }
 
-  .header__nav-link {}
 
   .menu__contacts {
     padding: 0 225px 0 0;
@@ -2197,6 +2133,7 @@ body.lock {
 
 }
 
+
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 /* ==================1260========================= */
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
@@ -2217,38 +2154,9 @@ body.lock {
     display: none;
   }
 
-  /* - - - - - - RESOURCES SLIDER - -- - - - - */
-
-  .resources__slide img {
-    transform: scale(0.9);
-
-  }
-
-  .resources__slide {
-    height: 359px;
-
-  }
-
-  .resources__image img {}
-
-
-  .resources__arrow {
-    margin: 0;
-  }
-
-  .resources__image {
-    margin: 0;
-  }
-
-  .resources__slide-title {
-    font-size: 14px;
-  }
-
-  .resources__slide-text {
-    margin: 0;
-
-  }
 }
+
+
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 /* ==================1100========================= */
@@ -2262,43 +2170,76 @@ body.lock {
     max-width: 432px;
   }
 
-   /* - - - - - - RESOURCES SLIDER - -- - - - - */
+  /* - - - - - - RESOURCES SLIDER - -- - - - - */
 
-  .resources__slide img {
-    transform: scale(0.8);
-
+  .resources__htitle {
+    font-size: 32px;
   }
 
-  .resources__slide {
-    height: 359px;
-
+  .resources__slide-heading {
+    margin-right: 50px;
   }
-.resources__htitle{
-  font-size: 32px;
+
+  .resources {
+    padding: 80px 0px 80px
+  }
+
+  .resources__list {
+    padding: 5px;
+    height: 317px
+  }
+
+  .resources__list img {
+    width: 123px;
+    height: 131px;
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+
+  .resources__list:hover img {
+    width: 100px;
+    height: 110px
+  }
+
+
+  .resources__text {
+    line-height: 18px;
+    font-size: 14px
+  }
+
+
+  .resources__models {
+    line-height: 8px
+  }
+
+  .resources__slider {
+    height: auto;
+  }
+
+  /* - - - - - - QUIZ - -- - - - - */
+
+  .quiz__title {
+    font-size: 32px;
+  }
+
+  .quiz__text {
+    font-size: 18px;
+  }
+
+  .quiz__question {
+    font-size: 20px;
+  }
+
+  .quiz__number {
+    font-size: 32px;
+  }
+
+  .quiz__wrapper {
+    width: 936px;
+  }
 }
-.resources__slide-heading{
-  margin-right: 50px;
-}
 
 
-  .resources__arrow {
-    margin: 0;
-  }
-
-  .resources__image {
-    margin: 0;
-  }
-
-  .resources__slide-title {
-    font-size: 14px;
-  }
-
-  .resources__slide-text {
-    font-size: 16px;
-    margin-bottom: 50px;
-
-  }
-}
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 /* ==================1000========================= */
@@ -2306,6 +2247,34 @@ body.lock {
 
 @media (max-width: 1000px) {
 
+  /* - - - - - - ОТСТУПЫ 120px - -- - - - - */
+  .main__quiz {
+    padding: 120px 0;
+  }
+
+  .main__team {
+    padding: 120px 0;
+  }
+
+  .main__cases {
+    padding: 120px 0;
+  }
+
+  .main__consultation {
+    padding: 120px 0;
+  }
+
+  .main__resources {
+    padding: 120px 0;
+  }
+
+  .header__body-inner {
+    padding: 120px 0;
+  }
+
+  .header__expirience-inner {
+    padding-bottom: 110px;
+  }
 
   /* - - - - - - HEADER - -- - - - - */
   .header__title {
@@ -2313,8 +2282,15 @@ body.lock {
     line-height: 135%;
   }
 
-  .header__text {}
 
+
+  .quiz__wrapper {
+    width: 700px;
+  }
+
+  .quiz__bonuses {
+    width: 700px;
+  }
 }
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
@@ -2367,11 +2343,8 @@ body.lock {
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 /* ==================770========================= */
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
-
-
-
 @media (max-width: 770px) {
-
+  
   /* - - - - - - HEADER- -- - - - - */
 
   .header__top-cons {
@@ -2417,17 +2390,6 @@ body.lock {
   .header__content {
     margin-right: 0;
   }
-
-  .header__main {}
-
-  .header__heading {}
-
-  .header__body-inner {
-    margin-bottom: 80px;
-  }
-
-
-
 
 
   /* - - - - - - EXPIRIENCE - -- - - - - */
@@ -2484,13 +2446,183 @@ body.lock {
   .pract__link {
     width: 458px;
   }
+
+
+  .resources__button {
+    display: none;
+  }
+
+  .resources__buttom {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+
+  /* - - - - - - QUIZ - -- - - - - */
+
+  .quiz__wrapper {
+    width: 439px;
+  }
+
+  .quiz__list {
+    grid-template-columns: 100%;
+  }
+
+  .quiz__bonus {
+    width: 439px;
+  }
+
+  .quiz__bonuses {
+    flex-direction: column;
+    width: 439px;
+  }
+
+  .quiz__block {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .quiz__block:last-child {
+    margin-bottom: 0;
+
+  }
+
+  /* - - - - - - CASES - -- - - - - */
+.cases__button  {
+  display: none;
 }
+  .cases__bottom{
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  .cases__slide::after{
+    transform: scale(0.9);
+  }
+
+  /* - - - - - - CONSULTATION - -- - - - - */
+
+  .consultation__img-box{
+    display: none;
+  }
+
+
+  .consultation__content{
+    align-items: center;
+    margin-right: 0;
+    margin: 0 auto;
+    
+
+  }
+  .consultation__text{
+    text-align: center;
+  }
+  
+  .consultation__title{
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .consultation__button{
+    margin: 0 auto;
+  
+  }
+
+
+
+
+}
+
+/* = = = = = = = = = MEDIA = = = = = = = = = = = = */
+/* ==================600========================= */
+/* = = = = = = = = = MEDIA = = = = = = = = = = = = */
+
+
+
+@media (max-width: 600px) {
+
+
+
+  /* - - - - - - RESOURCES SLIDER - -- - - - - */
+
+  .resources__subtitle {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px
+  }
+
+  .services__bottom {
+    margin-top: 30px
+  }
+
+  .resources__slide-heading {
+    margin-right: 0;
+    font-size: 16px;
+  }
+
+  .resources__htitle {
+    font-size: 28px;
+  }
+
+  .resources {
+    padding: 60px 0 60px
+  }
+
+  .resources__title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px
+  }
+
+
+  .services__bottom {
+    margin-top: 30px
+  }
+}
+
+
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 /* ==================510========================= */
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 
 @media (max-width: 510px) {
+
+  /* - - - - - - ОТСТУПЫ 80px - -- - - - - */
+  .main__quiz {
+    padding: 80px 0;
+  }
+
+  .main__team {
+    padding: 80px 0;
+  }
+
+  .main__cases {
+    padding: 80px 0;
+  }
+
+  .main__consultation {
+    padding: 80px 0;
+  }
+
+  .main__resources {
+    padding: 80px 0;
+  }
+
+  .header__body-inner {
+    padding: 80px 0;
+  }
+
+  .header__expirience-inner {
+    padding-bottom: 80px;
+  }
+
+
 
 
   /* - - - - - - EXPIRIENCE - -- - - - - */
@@ -2544,6 +2676,110 @@ body.lock {
     width: 345px;
     height: 105px;
   }
+
+  /* - - - - - - RESOURCES - -- - - - - */
+
+  .cases__button{
+
+  }
+  
+  /* - - - - - - QUIZ - -- - - - - */
+  .main__quiz {
+    padding: 80px 0;
+  }
+
+  .quiz__title {
+    font-size: 28px;
+  }
+
+  .quiz__text {
+    font-size: 16px;
+
+  }
+
+  .quiz__question {
+    font-size: 18px;
+  }
+
+  .quiz__item {
+    padding: 10px 14px;
+  }
+
+  .quiz__item p {
+    font-size: 12px;
+  }
+
+  .quiz__wrapper {
+    width: 320px;
+  }
+
+  .quiz__list {
+    grid-template-columns: 100%;
+  }
+
+  .quiz__bonus {
+    width: 320px;
+  }
+
+  .quiz__bonuses {
+    flex-direction: column;
+    width: 320px;
+  }
+
+  .quiz__block {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .quiz__block:last-child {
+    margin-bottom: 0;
+
+  }
+
+  /* - - - - - - TEAM_SLIDER - -- - - - - */
+
+  .team__htitle {
+    font-size: 28px;
+  }
+
+  /* - - - - - - CASES - -- - - - - */
+
+  .cases__htitle {
+    font-size: 28px;
+  }
+
+
+  .cases__slide{
+    flex-direction: column;
+    height: 320px;
+  }
+  .cases__brand {
+    width: 100%;
+    height: 100px;
+    margin: 0 0 20px 0;
+
+}
+
+.cases__brand img {
+  width: 103px;
+}
+
+.cases__info{
+  width: 100%;
+  padding: 15px;
+}
+
+.cases__info-title{
+  line-height: 120%;
+}
+.cases__slide::after{
+  transform: scale(0.7);
+}
+.container {
+  width: 400px;
+}
 }
 
 
@@ -2553,6 +2789,35 @@ body.lock {
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
 
 @media (max-width: 450px) {
+
+  /* - - - - - - ОТСТУПЫ 60px - -- - - - - */
+  .main__quiz {
+    padding: 60px 0;
+  }
+
+  .main__team {
+    padding: 60px 0;
+  }
+
+  .main__cases {
+    padding: 60px 0;
+  }
+
+  .main__consultation {
+    padding: 60px 0;
+  }
+
+  .main__resources {
+    padding: 60px 0;
+  }
+
+  .header__body-inner {
+    padding: 60px 0;
+  }
+
+  .header__expirience-inner {
+    padding-bottom: 60px;
+  }
 
   .container {
     width: 320px;
@@ -2607,7 +2872,118 @@ body.lock {
     height: 80px;
   }
 
+  /* - - - - - - RESOURCES SLIDER - -- - - - - */
+
+  .resources__slide-heading {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .resources__htitle {
+    font-size: 20px;
+  }
+
+  /* - - - - - - QUIZ - -- - - - - */
+  .main__quiz {
+    padding: 60px 0;
+  }
+
+  .quiz__title {
+    font-size: 20px;
+  }
+
+  .quiz__text {
+    font-size: 12px;
+
+  }
+
+  .quiz__buttons-prev {
+    font-size: 14px;
+    padding: 5px 13px;
+  }
+
+  .quiz__buttons-next {
+    font-size: 14px;
+    padding: 5px 13px;
+  }
+
+  .quiz__question {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .quiz__number {
+    font-size: 26px;
+  }
+
+  .quiz__item {
+    padding: 10px 14px;
+    text-align: center;
+  }
+
+
+
+  .quiz__item p {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .quiz__wrapper {
+    width: 250px;
+  }
+
+  .quiz__list {
+    grid-template-columns: 100%;
+  }
+
+  .quiz__bonus {
+    width: 250px;
+  }
+
+  .quiz__bonuses {
+    flex-direction: column;
+    width: 250px;
+  }
+
+  .quiz__block {
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .quiz__block:last-child {
+    margin-bottom: 0;
+
+  }
+
+  /* - - - - - - TEAM_SLIDER - -- - - - - */
+
+  .main__team {
+    padding: 60px 0;
+  }
+
+  .team__htitle {
+    font-size: 24px;
+  }
+
+  .team__slide-text {
+    font-size: 14px;
+  }
+
+  /* - - - - - - CASES - -- - - - - */
+
+  .cases__htitle {
+    font-size: 24px;
+  }
+
+  .cases__slide-text {
+    font-size: 14px;
+  }
+
+  .cases__info{
+    padding: 15px;
+  }
+  .cases__info{
+    padding: 15px;
+  }
 }
-
-
-
