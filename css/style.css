@@ -15,23 +15,7 @@ body.lock {
 
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(49, 49, 49, 0.508);
-  z-index: 50;
-  visibility: hidden;
-  opacity: 0;
-}
 
-.overlay--show {
-  visibility: visible;
-  opacity: 1;
-  transition: all .3s;
-}
 
 .menu__hidden {
   display: none;
@@ -129,6 +113,24 @@ body.lock {
 
 /* ===========================BURGER================================= */
 /* ===========================BURGER================================= */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(49, 49, 49, 0.508);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay--show {
+  visibility: visible;
+  opacity: 1;
+  transition: all .3s;
+}
+
 
 .burger {
   width: 46px;
@@ -223,6 +225,167 @@ body.lock {
   width: 29px;
   transition: all .3s;
 }
+
+/* ===========================FORM================================= */
+/* ===========================FORM================================= */
+
+/* .form__wrapper{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10%);
+  transition: all .5s;
+} */
+
+/* .form__wrapper--active{
+  opacity: 1;
+  visibility: visible;
+} */
+
+.form {
+  position: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  max-width: 510px;
+  max-height: 728px;
+  background-color: #141414;
+  border-radius: 10px;
+  margin: 0 auto;
+  opacity: 1;
+  visibility: hidden;
+  transform: translate(140%, -100%);
+  z-index: 100;
+  transition: all .5s;
+}
+
+.form--open{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(140%, 10%);
+}
+
+
+.form__title {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+
+}
+
+.form__title-head {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  color: #fff;
+  padding-top: 40px;
+
+}
+
+.form__title-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  padding: 0 65px;
+}
+
+.pop__form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 65px;
+}
+
+
+.pop__form-label {
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 165%;
+  flex: 1 1 auto;
+}
+
+.pop__form-input,
+.pop__form-text {
+  display: block;
+  padding: 10px 15px;
+  background: rgba(138, 138, 138, 0.15);
+  border-radius: 8px;
+  color: #fff;
+  width: 100%;
+}
+
+.pop__form-input:focus,
+.pop__form-text:focus{
+  border: 1px solid #FFFFFF;
+}
+
+
+
+.pop__form-text {
+  resize: none;
+  height: 120px;
+}
+
+.pop__form-input::placeholder,
+.pop__form-text::placeholder {
+  color: #918e8e;
+}
+
+
+.pop__form-checkbox {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.pop__form-default {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+.pop__form-default:checked + .pop__form-custom {
+  background: url("../image/check.svg") 50% 50% no-repeat , #DA4533 ;
+  border: 1px solid #DA4533;
+}
+
+.pop__form-label-chec {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 165%;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+
+.pop__form-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  border: 1px solid #8A8A8A;
+  cursor: pointer;
+}
+
+.pop__form-button {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+
 
 
 
@@ -2752,21 +2915,24 @@ body.lock {
 
   /* ----------------FOOTER-------------- */
 
-  .footer__data{
+  .footer__data {
     flex-direction: column;
   }
-  .footer__data-logo{
+
+  .footer__data-logo {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  .footer__info{
+
+  .footer__info {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
   }
 
-  .footer__copyright{
+  .footer__copyright {
     display: none;
   }
+
   .footer__copyright-hidden {
     display: inline-flex;
     flex-direction: column;
@@ -2776,9 +2942,10 @@ body.lock {
   .footer__copyright-agreement {
     margin-bottom: 10px;
   }
-.footer__copyright-oferta{
-  margin-bottom: 10px;
-}
+
+  .footer__copyright-oferta {
+    margin-bottom: 10px;
+  }
 }
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
@@ -3102,7 +3269,7 @@ body.lock {
 
   /* - - - - - - TEAM-FORUM - -- - - - - */
 
-  .footer__info{
+  .footer__info {
     gap: 20px;
   }
 
@@ -3379,9 +3546,9 @@ body.lock {
 
   }
 
-  .footer__data-document{
+  .footer__data-document {
     display: block;
-    
+
   }
 
 
