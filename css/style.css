@@ -1415,7 +1415,8 @@ body.lock {
 
 .team__card {
   display: grid;
-  grid-template: 1fr / repeat(3, minmax(450px, 1fr));
+  /* grid-template: 1fr / repeat(3, minmax(450px, 1fr)); */
+  grid-template: 1fr / repeat(3, 1fr);
   align-items: center;
   justify-content: space-between;
   margin-top: 50px;
@@ -1663,7 +1664,6 @@ body.lock {
 
 .footer__data {
   display: flex;
-  justify-content: space-between;
   padding: 0 0 58px 0;
   border-bottom: 1.5px solid;
   border-image: linear-gradient(90deg, rgba(140, 140, 140, 1), rgba(140, 140, 140, 0.5), rgba(166, 166, 166, 0) 100.87%, #ffffff) 100.87% 0%;
@@ -1719,18 +1719,35 @@ body.lock {
   color: #5C5C5C;
   font-weight: 400;
   font-size: 14px;
-  line-height: 23px
+  line-height: 23px;
+
+}
+
+.footer__data-cpp {
+  color: #5C5C5C;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+
 }
 
 .footer__data-inn span {
-  color: #fff
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer__data-cpp span {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 
 .footer__info {
   display: grid;
-  grid-template: 1fr / repeat(4, 1fr);
-  gap: 195px;
+  grid-template: auto / repeat(4, 1fr);
+  gap: 130px;
   margin-top: 50px;
   font-weight: 500;
   font-size: 16px;
@@ -2187,6 +2204,18 @@ body.lock {
     display: none;
   }
 
+  /* ----------------FOOTER-------------- */
+
+  .footer__data {}
+
+  .footer__data-society {
+    max-width: 328px;
+    margin-right: 115px;
+  }
+
+  .footer__info {
+    gap: 109px;
+  }
 }
 
 
@@ -2270,6 +2299,64 @@ body.lock {
   .quiz__wrapper {
     width: 936px;
   }
+}
+
+
+/* = = = = = = = = = MEDIA = = = = = = = = = = = = */
+/* ==================1020========================= */
+/* = = = = = = = = = MEDIA = = = = = = = = = = = = */
+
+@media (max-width: 1020px) {
+  /* ----------------FOOTER-------------- */
+
+
+  .footer__data-text {
+    display: block;
+    width: 480px
+  }
+
+  .footer__data-society {
+    margin-right: 0;
+    max-width: 488px;
+    margin-bottom: 20px;
+  }
+
+  .footer__data-document {
+    display: flex;
+    width: 386px;
+    justify-content: space-between;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .footer__data-about {
+    flex-direction: column;
+    width: 130px;
+    justify-content: start;
+  }
+
+  .footer__data-address {
+    width: 749px;
+    margin-right: 20px;
+  }
+
+  .footer__data-inn {
+    margin-bottom: 5px
+  }
+
+  .footer__data-inn {
+
+    width: 150px;
+  }
+
+  .footer__data-cpp {
+    width: 150px;
+  }
+
+  .footer__get {
+    display: none;
+  }
+
 }
 
 
@@ -2370,6 +2457,25 @@ body.lock {
   .pract__link {
     width: 356px;
   }
+
+  /* - - - - - - TEAM-FORUM - -- - - - - */
+
+  .team__card-info {
+    flex-direction: column;
+
+  }
+
+  .team__card-experts {
+    align-items: center;
+  }
+
+  .team__card-expert {
+    margin-bottom: 15px;
+  }
+
+  .team__card-name {
+    margin-bottom: 5px;
+  }
 }
 
 
@@ -2380,44 +2486,54 @@ body.lock {
 
   /* - - - - - - BURGER - -- - - - - */
 
-  .menu__wrapper{
+  .menu__wrapper {
     display: block;
     justify-content: flex-end;
     padding-top: 30px;
   }
 
-  .menu__get::after{
+  .menu__get::after {
     display: none;
   }
-  .menu__nav{
+
+  .menu__nav {
     margin-right: 0;
     margin-bottom: 30px;
   }
-  .menu__contacts{
+
+  .menu__contacts {
     padding: 0 72px 0 0;
   }
-  .menu__nav-link{
+
+  .menu__nav-link {
     font-size: 22px;
   }
-  .menu__contact-title{
+
+  .menu__contact-title {
     font-size: 16px;
   }
-  .menu__contact-link{
+
+  .menu__contact-link {
     font-size: 14px;
   }
-  .menu__socials-title{
+
+  .menu__socials-title {
     font-size: 16px;
   }
-  .menu__socials-link{
+
+  .menu__socials-link {
     font-size: 14px;
   }
-  .menu__get-title{
+
+  .menu__get-title {
     font-size: 16px;
   }
-  .menu__get-link{
+
+  .menu__get-link {
     font-size: 12px;
   }
-  .menu__socials{
+
+  .menu__socials {
     display: inline-block;
   }
 
@@ -2614,8 +2730,55 @@ body.lock {
   }
 
 
+  /* - - - - - - TEAM-FORUM - -- - - - - */
 
+  .team__card {
+    display: grid;
 
+  }
+
+  .team__card-info {
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .team__card-info {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  /* ----------------FOOTER-------------- */
+
+  .footer__data{
+    flex-direction: column;
+  }
+  .footer__data-logo{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .footer__info{
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+
+  .footer__copyright{
+    display: none;
+  }
+  .footer__copyright-hidden {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 35px;
+  }
+
+  .footer__copyright-agreement {
+    margin-bottom: 10px;
+  }
+.footer__copyright-oferta{
+  margin-bottom: 10px;
+}
 }
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
@@ -2861,8 +3024,89 @@ body.lock {
   .container {
     width: 400px;
   }
-}
 
+  /* - - - - - - TEAM-FORUM - -- - - - - */
+
+  .team__forum-heading {
+    display: inline-block;
+  }
+
+  .team__filter-btn {
+    margin-right: 26px;
+  }
+
+  .team__forum-filter {
+    max-width: 300px;
+  }
+
+  .team__card {
+    /* grid-template-columns: 1fr ; */
+    margin-right: 0;
+    grid-template: 1fr / repeat(1, minmax(320px, 1fr));
+  }
+
+  .team__card-info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: -3;
+  }
+
+  .team__card-info {
+    margin-right: 0;
+  }
+
+  .team__card-lection {
+    margin-right: 0;
+  }
+
+  .team__card-desc {
+    margin-bottom: 30px;
+  }
+
+  .team__card-info {
+    margin-bottom: 30px;
+    max-width: 400px;
+  }
+
+  .team__card-desc {
+    font-size: 14px;
+  }
+
+  .team__card-date {
+    display: inline-block;
+
+  }
+
+  .team__card-date::before {
+    right: 170px;
+
+  }
+
+  .team__card-date::after {
+    right: 139px;
+  }
+
+  .team__card-forums {
+    font-size: 14px;
+  }
+
+  .team__card-name {
+    font-size: 14px;
+  }
+
+  .team__card-expert img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* - - - - - - TEAM-FORUM - -- - - - - */
+
+  .footer__info{
+    gap: 20px;
+  }
+
+}
 
 
 /* = = = = = = = = = MEDIA = = = = = = = = = = = = */
@@ -3051,6 +3295,10 @@ body.lock {
     font-size: 14px;
   }
 
+  .team__slider-arrows {
+    margin-top: 25px;
+  }
+
   /* - - - - - - CASES - -- - - - - */
 
   .cases__htitle {
@@ -3067,6 +3315,32 @@ body.lock {
 
   .cases__info {
     padding: 15px;
+  }
+
+  /* - - - - - - TEAM-FORUM - -- - - - - */
+
+  .team__forum {
+    padding-top: 35px;
+  }
+
+  .team__card {
+    padding-bottom: 20px;
+  }
+
+  .team__card-info {
+    max-width: 270px;
+  }
+
+  .team__card-lection {
+    max-width: 270px;
+  }
+
+  .team__card-date::before {
+    right: 250px;
+  }
+
+  .team__card-date::after {
+    right: 210px;
   }
 
   /* - - - - - - FOOTER - -- - - - - */
@@ -3086,13 +3360,14 @@ body.lock {
 
     font-size: 14px;
     margin-bottom: 15px;
-    margin: 10px 0 15px auto;
+    margin: 10px 0 15px 0;
     width: 320px;
 
   }
 
   .footer__data-address {
     font-size: 14px;
+    max-width: 310px;
   }
 
   .footer__data-text {
@@ -3102,6 +3377,11 @@ body.lock {
   .footer__data-about {
     font-size: 14px;
 
+  }
+
+  .footer__data-document{
+    display: block;
+    
   }
 
 
@@ -3179,9 +3459,6 @@ body.lock {
     font-size: 14px;
   }
 
-  /* .footer__info-navigation{
-  display: none;
-} */
   .footer__copyright {
     display: none;
   }
@@ -3253,4 +3530,5 @@ body.lock {
   .team__card-info {
     display: inline-flex;
   }
+
 }
