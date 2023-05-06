@@ -88,7 +88,7 @@
               <a href="tel:78888888">+7 (888) 888 88 88</a>
             </div>
             <div class="header__top-get">
-              <a href="#">Получить консультацию</a>
+              <a href="#popup">Получить консультацию</a>
             </div>
           </div>
           <nav class="header__nav">
@@ -123,8 +123,8 @@
                   в России и за рубежом</p>
               </div>
               <div class="header__button-box">
-                <a class="header__button button" href="">Получить индивидуальную <br> консультацию</a>
-                <a class="header__button-empty button--empty" href="">Все услуги</a>
+                <a class="header__button button" href="#popup">Получить индивидуальную <br> консультацию</a>
+                <a class="header__button-empty button--empty" href="#">Все услуги</a>
               </div>
             </div>
             <div class="header__img-box">
@@ -954,7 +954,7 @@
         </div>
         <div class="footer__copyright">
           <p class="footer__copyright-copy">© 2021 IPhub. Все права защищены.</p>
-          <a href="#" class="footer__copyright-oferta" >Публичная оферта</a>
+          <a href="#" class="footer__copyright-oferta">Публичная оферта</a>
           <a href="#" class="footer__copyright-agreement">Пользовательское соглашение</a>
         </div>
         <div class="footer__copyright-hidden">
@@ -966,6 +966,38 @@
     </div>
   </footer>
 
+    <div class="form" id="popup">
+      <div class="form__title">
+        <h3 class="form__title-head">Оставьте заявку</h3>
+        <p class="form__title-text">Укажите свои данные, и наш специалист свяжется с вами</p>
+      </div>
+      <form class="pop__form">
+        <label class="pop__form-label">
+          Как к вам обращаться ?
+          <input  type="text" class="pop__form-input" placeholder="Алексей Николаевич" required>
+        </label>
+        <label class="pop__form-label">
+          Номер телефона / WhatsApp
+          <input  type="tel" class="pop__form-input" required>
+        </label>
+        <label class="pop__form-label">
+          Почта
+          <input  type="email" class="pop__form-input" placeholder="AlexIr@mail.ru|" required>
+        </label>
+        <label class="pop__form-label">
+          Запрос
+          <textarea class="pop__form-text"></textarea>
+        </label>
+        <label class="pop__form-label-chec">
+          <div class="pop__form-checkbox">
+            <input class="pop__form-default _req" required type="checkbox">
+            <span class="pop__form-custom"></span>
+          </div>
+          <p>Я принимаю соглашение на обработку <u>персональных данных</u> и <u>политику конфиденциальности</u></p>
+        </label>
+        <button type="submit" class="pop__form-button button--empty" href="">Отправить</button>
+      </form>
+    </div>
 </div>
 
 
