@@ -7,8 +7,26 @@ $(function () {
         var id = $(this).attr('href'),
             top = $(id).offset().top
         $('body,html').animate({ scrollTop: top }, 800)
-})
+    })
 
+
+    // ============================= POPUP =============================
+    
+    $('.header__top-get,.header__button,.form__wrapper').on('click', function (e) {
+        e.preventDefault()
+        $('.form').toggleClass('form--open')
+        $('.overlay').toggleClass('overlay--show')
+        $('body').toggleClass('lock')
+    
+    })
+    
+    $('.overlay').on('click', function (e) {
+        e.preventDefault()
+        $('.form').removeClass('form--open')
+        $('.overlay').removeClass('overlay--show')
+        $('body').removeClass('lock')
+    
+    })
 
     // ============================= SLAIDER =============================
     $('.resources__slide-list').slick({
