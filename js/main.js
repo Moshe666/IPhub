@@ -12,21 +12,45 @@ $(function () {
 
     // ============================= POPUP =============================
     
-    $('.header__top-get,.header__button,.form__wrapper').on('click', function (e) {
+    $('.header__top-get,.header__button').on('click', function (e) {
         e.preventDefault()
-        $('.form').toggleClass('form--open')
+        $('.modal').toggleClass('form--open')
         $('.overlay').toggleClass('overlay--show')
         $('body').toggleClass('lock')
     
     })
     
-    $('.overlay').on('click', function (e) {
+    $('.modal__close').on('click', function (e) {
         e.preventDefault()
-        $('.form').removeClass('form--open')
+        $('.modal').removeClass('form--open')
         $('.overlay').removeClass('overlay--show')
         $('body').removeClass('lock')
     
     })
+
+    // ============================= ВАЛИДАЦИЯ  =============================
+
+    new window.JustValidate('.pop__form',{
+        rules: {
+            
+        },
+        messages:{
+            email:{
+                required: 'Укажите вашу почту',
+                
+            },
+            name:{
+                required: 'Укажите ваше имя',
+            },
+            
+        }
+    }
+
+    )
+
+
+
+
 
     // ============================= SLAIDER =============================
     $('.resources__slide-list').slick({
