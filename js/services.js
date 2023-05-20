@@ -32,6 +32,69 @@ $('.tabs__triggers-item').on('click', function () {
   $(this).children('.tabs__triggers-text').addClass('tabs__triggers-text--active')
 });
 
+// ============================= BURGER =============================
 
+$('.burger, .overlay').on('click', function (e) {
+  e.preventDefault()
+  $('.menu__wrapper').toggleClass('menu--open')
+  $('.overlay').toggleClass('overlay--show')
+  $('body').toggleClass('lock')
+  $('.burger').toggleClass('burger--active')
+
+})
+
+$('.menu__wrapper, .overlay').on('click', function (e) {
+  e.preventDefault()
+  $('.menu__wrapper').removeClass('menu--open')
+  $('.overlay').removeClass('overlay--show')
+  $('body').removeClass('lock')
+  $('.burger').removeClass('burger--active')
+
+})
+setInterval(() => {
+  if ($(window).scrollTop() > 0 && $('.menu__wrapper').hasClass('menu--open') === false) {
+      $('.burger').addClass('burger--follow')
+  } else {
+      $('.burger').removeClass('burger--follow')
+  }
+}, 0);
+
+   // ============================= POPUP =============================
+
+   $('.header__top-get,.header__button').on('click', function (e) {
+    e.preventDefault()
+    $('.modal').toggleClass('form--open')
+    $('.overlay').toggleClass('overlay--show')
+    $('body').toggleClass('lock')
+
+})
+
+$('.modal__close').on('click', function (e) {
+    e.preventDefault()
+    $('.modal').removeClass('form--open')
+    $('.overlay').removeClass('overlay--show')
+    $('body').removeClass('lock')
+
+})
+
+// ============================= ВАЛИДАЦИЯ  =============================
+
+new window.JustValidate('.pop__form', {
+    rules: {
+
+    },
+    messages: {
+        email: {
+            required: 'Укажите вашу почту',
+
+        },
+        name: {
+            required: 'Укажите ваше имя',
+        },
+
+    }
+}
+
+)
 
 }); 
