@@ -849,6 +849,7 @@ body.lock {
 
 .resources__list {
   width: 290px;
+  
   position: relative;
   padding: 20px 25px;
   overflow: hidden;
