@@ -11,38 +11,38 @@ $(function () {
 
 
     // ============================= POPUP =============================
-    
+
     $('.header__top-get,.header__button').on('click', function (e) {
         e.preventDefault()
         $('.modal').toggleClass('form--open')
         $('.overlay').toggleClass('overlay--show')
         $('body').toggleClass('lock')
-    
+
     })
-    
+
     $('.modal__close').on('click', function (e) {
         e.preventDefault()
         $('.modal').removeClass('form--open')
         $('.overlay').removeClass('overlay--show')
         $('body').removeClass('lock')
-    
+
     })
 
     // ============================= ВАЛИДАЦИЯ  =============================
 
-    new window.JustValidate('.pop__form',{
+    new window.JustValidate('.pop__form', {
         rules: {
-            
+
         },
-        messages:{
-            email:{
+        messages: {
+            email: {
                 required: 'Укажите вашу почту',
-                
+
             },
-            name:{
+            name: {
                 required: 'Укажите ваше имя',
             },
-            
+
         }
     }
 
@@ -362,6 +362,7 @@ $('.team__filter-btn').on('click', function () {
     $('.team__filter-btn').removeClass('team__filter-btn--active')
     $(this).addClass('team__filter-btn--active')
 })
+
 
 
 // ============================= CASES-SLAIDER =============================
