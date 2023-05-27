@@ -836,59 +836,23 @@ body.lock {
 /* -------------------SLIDER------------- */
 /* -------------------SLIDER------------- */
 
-
-
-.resources__slider-list {
-  width: 100%;
-  margin-bottom: 63px;
+/* .resources__slider .slick-track{
   display: flex;
-  align-items: center;
-  gap: 20px;
-  height: 400px
-}
+  
+} */
+
+
 
 .resources__list {
-  width: 290px;
-  
+  max-width: 290px;
+  min-height: 400px;
   position: relative;
-  padding: 20px 25px;
-  overflow: hidden;
+  padding: 25px 20px;
   background: #1B1B1B;
   border-radius: 8px;
-  height: 100%;
   margin-right: 20px;
+  
 
-}
-
-
-.resources__list img {
-  width: 167px;
-  height: 176px;
-  margin: 0 auto;
-  display: block;
-  margin-top: 43px
-}
-
-.resources__list:hover .resources__text {
-  font-size: 14px;
-  line-height: 23px
-}
-
-.resources__list:hover .resources__models {
-  opacity: 1;
-  margin-bottom: 5px
-}
-
-.resources__list:hover .arrow {
-  opacity: 1
-}
-
-.resources__list:hover img {
-  width: 135px;
-  height: 142px;
-  margin-bottom: 30px;
-  opacity: 0.5;
-  transition: 0.3s all
 }
 
 .resources__models {
@@ -901,12 +865,40 @@ body.lock {
 }
 
 .resources__text {
-
   font-size: 18px;
   line-height: 160%;
   color: #8A8A8A;
   transition: all 0.5s;
 }
+
+.resources__list:hover .resources__text {
+  font-size: 14px;
+ 
+}
+
+.resources__list:hover .resources__models {
+  opacity: 1;
+}
+
+.resources__icon{
+  width: 167px;
+  height: 176px;
+  margin: 43px auto 0px auto;
+  transition: all .3s;
+
+}
+
+.resources__list:hover .arrow {
+  opacity: 1
+}
+
+.resources__list:hover .resources__icon {
+  opacity: 0.5;
+  transition: 0.3s all;
+  transform: scale(0.8);
+}
+
+
 
 .resources__buttom {
   display: none;
@@ -2441,20 +2433,16 @@ body.lock {
 
   .resources__list {
     padding: 5px;
-    height: 317px
+    min-height: 317px
   }
 
-  .resources__list img {
-    width: 123px;
-    height: 131px;
+  .resources__icon {
+    
     margin-top: 36px;
     margin-bottom: 24px;
   }
 
-  .resources__list:hover img {
-    width: 100px;
-    height: 110px
-  }
+
 
 
   .resources__text {
@@ -2464,7 +2452,7 @@ body.lock {
 
 
   .resources__models {
-    line-height: 8px
+    line-height: 140%;
   }
 
   .resources__slider {
