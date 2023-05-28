@@ -72,14 +72,6 @@ $(function () {
                 },
             },
             {
-                breakpoint: 600,
-                settings: {
-                    draggable: true,
-                    slidesToShow: 2,
-                    arrows: false,
-                }
-            },
-            {
                 breakpoint: 770,
                 settings: {
                     draggable: true,
